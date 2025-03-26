@@ -1,14 +1,10 @@
-import './App.css'
+import { PlansBox } from "./components/plansBox";
 
-function App() {
+export function App() {
 
   return (
-    <>
-      <div>
-        <p>Crie aqui seu projeto</p>
-       </div>
-    </>
+    <main className="bg-black px-10 py-10 font-inria">
+      <PlansBox />
+    </main>
   )
 }
-
-export default App
