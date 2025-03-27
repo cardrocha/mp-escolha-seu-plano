@@ -8,8 +8,8 @@ export function PlansBox() {
   return (
     <>
       <div className="flex justify-center">
-        <button onClick={() => setSelectedPlan(false)} className={`border-2 border-white rounded-lg py-1 px-6 text-sm text-white transition-colors ${selectedPlan ? "bg-transparent hover:bg-gray-800" : "bg-gray-700 z-10"}`}>Mensal</button>
-        <button onClick={() => setSelectedPlan(true)} className={`${selectedPlan ? "bg-gray-700" : "bg-transparent hover:bg-gray-800"} text-sm font-light text-amber-400 border-2 border-white rounded-lg py-1 px-6 -ml-2 transition-colors`}>Anual (20% de desconto)</button>
+        <button title="clique aqui" onClick={() => setSelectedPlan(false)} className={`border-2 border-white rounded-lg py-1 px-6 text-sm text-white transition-colors cursor-pointer ${selectedPlan ? "bg-transparent hover:bg-gray-800" : "bg-gray-700 z-10"}`}>Mensal</button>
+        <button title="clique aqui" onClick={() => setSelectedPlan(true)} className={`${selectedPlan ? "bg-gray-700" : "bg-transparent hover:bg-gray-800"} text-sm font-light text-amber-400 border-2 border-white rounded-lg py-1 px-6 -ml-2 transition-colors cursor-pointer`}>Anual (20% de desconto)</button>
       </div>
       <div className="flex flex-col xl:flex-row items-center justify-center gap-7 mt-7">
         {plansData.map((item) => (
@@ -39,7 +39,7 @@ export function PlansBox() {
                   </li>
                 ))}
               </ul>
-              <button className={`flex items-center gap-1.5 bg-violet-900 text-white whitespace-nowrap py-1.5 px-4 rounded-xs cursor-pointer ${item.id === 1 ? "w-[136px]" : "w-[160px]"}`}>
+              <button title="escolha esse e comece já" className={`flex items-center gap-1.5 bg-violet-900 text-white whitespace-nowrap py-1.5 px-4 rounded-xs cursor-pointer ${item.id === 1 ? "w-[136px]" : "w-[160px]"}`}>
                 <ArrowRight size={15} className="bg-white text-violet-900 rounded-full" />
                 {item.buttonText}
               </button>
