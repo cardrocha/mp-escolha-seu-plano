@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 @theme {
+  --color-background: #0C0C0C;
   --font-indieFlower: "Indie Flower", cursive;
   --font-inria: "Inria Sans", sans-serif;
 
   --text-xxs: 10px;
+  --text-4xls: 2.75rem;
 }
