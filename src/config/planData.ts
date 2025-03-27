@@ -1,10 +1,13 @@
-import { PlansData } from "../types";
+import { PlanData } from "../types";
 
-export const planData: PlansData = [
+export const plansData: PlanData[] = [
   {
     id: 1,
     title: "Só por hobby",
-    price: "Grátis",
+    price: { 
+      original: "Grátis",
+      discount: "Grátis" 
+    },
     subTitle: "Incluso:",
     features: [
       "100 mini projetos para resolver",
@@ -16,7 +19,11 @@ export const planData: PlansData = [
   {
     id: 2,
     title: "Plano PRO",
-    price: "R$ 29,90",
+    price: {
+      original: "R$ 29,90",
+      discount: "R$ 23,92",
+      anual: "R$ 287,04"
+    },
     subTitle: "Tudo do plano grátis e mais:",
     features: [
       "1000 mini projetos para resolver",
@@ -28,7 +35,11 @@ export const planData: PlansData = [
   {
     id: 3,
     title: "Empresas",
-    price: "R$ 49,90",
+    price: { 
+      original: "R$ 49,90",
+      discount: "R$ 39,92",
+      anual: "R$ 479,04"
+    },
     subTitle: "Tudo do plano grátis e mais:",
     features: [
       "Assessoria excolusiva para dúvidasa",

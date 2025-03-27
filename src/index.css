@@ -2,6 +2,7 @@
 
 @theme {
   --color-background: #0C0C0C;
+  --color-background-light: #888888;
   --font-indieFlower: "Indie Flower", cursive;
   --font-inria: "Inria Sans", sans-serif;
 
