@@ -11,7 +11,7 @@ export function PlansBox() {
         <button title="clique aqui" onClick={() => setSelectedPlan(false)} className={`border-2 border-white rounded-lg py-1 px-6 text-sm text-white transition-colors cursor-pointer ${selectedPlan ? "bg-transparent hover:bg-gray-800" : "bg-gray-700 z-10"}`}>Mensal</button>
         <button title="clique aqui" onClick={() => setSelectedPlan(true)} className={`${selectedPlan ? "bg-gray-700" : "bg-transparent hover:bg-gray-800"} text-sm font-light text-amber-400 border-2 border-white rounded-lg py-1 px-6 -ml-2 transition-colors cursor-pointer`}>Anual (20% de desconto)</button>
       </div>
-      <div className="flex flex-col xl:flex-row items-center justify-center gap-7 mt-7">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-7 mt-7">
         {plansData.map((item) => (
           <div key={item.id} className="flex flex-col bg-black border-2 w-full h-full md:h-[402px] md:w-[368px] border-gray-500 p-5 rounded-2xl">
             <div className="flex gap-3 flex-col bg-background border-2 border-gray-500 py-12 px-10 w-full md:w-[328px] rounded-md h-full">
