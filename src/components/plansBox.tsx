@@ -1,9 +1,17 @@
 import { ArrowRight, Check } from "lucide-react";
 import { plansData } from "../config/planData";
 import { useState } from "react";
+import { Modal } from "./modal";
 
 export function PlansBox() {
   const [selectedPlan, setSelectedPlan] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  const [planChoice, setPlanChoice] = useState<string>("");
+
+  const HandleOpenModal = (planName: string) => {
+    setPlanChoice(planName);
+    setOpenModal(true);
+  };
 
   return (
     <>
@@ -39,13 +47,14 @@ export function PlansBox() {
                   </li>
                 ))}
               </ul>
-              <button title="escolha esse e comece já" className={`flex items-center gap-1.5 bg-violet-900 text-white whitespace-nowrap py-1.5 px-4 rounded-xs cursor-pointer ${item.id === 1 ? "w-[136px]" : "w-[160px]"}`}>
+              <button onClick={() => HandleOpenModal(item.title)} title="escolha esse e comece já" className={`flex items-center gap-1.5 bg-violet-900 hover:bg-violet-950 transition-colors duration-200 text-white whitespace-nowrap py-1.5 px-4 rounded-xs cursor-pointer ${item.id === 1 ? "w-[136px]" : "w-[160px]"}`}>
                 <ArrowRight size={15} className="bg-white text-violet-900 rounded-full" />
                 {item.buttonText}
               </button>
             </div>
           </div>
         ))}
+        {openModal && <Modal setOpenModal={setOpenModal} planChoice={planChoice} />}
       </div>
     </>
   );
