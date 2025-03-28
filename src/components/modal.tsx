@@ -15,7 +15,7 @@ export function Modal({ setOpenModal, planChoice }: ModalProps) {
 
   return (
     <div className="fixed inset-0 bg-black/60 bg-opacity-50 flex justify-center items-center">
-      <div className="bg-black p-10 rounded-lg border-2 border-background-light">
+      <div className="bg-black p-10 w-[380px] rounded-lg border-2 border-background-light">
         {selectedModal ? (
           <>
             <p className="text-2xl font-bold text-white">Deseja confirmar a escolha?</p>
@@ -24,7 +24,7 @@ export function Modal({ setOpenModal, planChoice }: ModalProps) {
             </p>
           </>
         ) : (
-          <p className="text-2xl font-bold text-white">Parabéns pela escolha!</p>
+          <p className="text-2xl text-center font-bold text-white">Parabéns pela escolha!</p>
         )}
 
         <div className="flex items-center justify-center gap-1">
